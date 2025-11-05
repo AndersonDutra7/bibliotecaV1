@@ -24,8 +24,16 @@ export async function registrarUsuario(req, res) {
         );
     }
 
+    const novoUsuario = await criarUsuario(nome, email, senha);
+    res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!", usuario: novoUsuario });
+
 
    } catch (error) {
+    console.log(error);
+    res.status(500).json({
+        erro: "Erro ao cadastrar usuário."
+    });
+    
     
    }
 }
