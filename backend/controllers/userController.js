@@ -1,4 +1,4 @@
-import { criarUsuario, buscarUsuarioPorEmail } from "../models/userModel";
+import { criarUsuario, buscarUsuarioPorEmail } from "../models/userModel.js";
 
 export async function registrarUsuario(req, res) {
    try {
